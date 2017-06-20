@@ -1,0 +1,1 @@
+# BotCommons core specifications

@@ -1,4 +1,4 @@
-# BotCommons: metadata for bots
+# BotCommons: Metadata for Bots
 
 ## Introduction
 

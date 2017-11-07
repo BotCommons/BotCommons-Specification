@@ -1,8 +1,8 @@
 # BotCommons: metadata for bots
 
-The lack of common industry practices makes it difficult to impossible to implement automated tooling for bots (such as discovery, versions transitioning, bot status) as well as inform end-users efficiently (such as bot commands, usage policy, feedback submission, point of contact for support).
+Lack of common industry practices makes it difficult to inform end-users efficiently (regarding bot usage terms, feedback submission or point of contact for support) as well as implement tooling for bots (such as discovery, versions transitioning, bot status checks).
 
-The goal of this project is to fill these [gaps in User Experience](UseCases.md) through industry [common practices and standardized metadata](BotCommons.md).
+Our goal here is to fill these [gaps in Bots User's Experience](UseCases.md) through industry [common practices and standardized metadata](BotCommons.md) to facilitate the creation of cross-platforms automated tooling for bots.
 
 
 ## Principles
@@ -15,18 +15,21 @@ From other bottom up specifications experience, we can envision that we'll come 
 
 We value community feedbacks and will leverage github issues for the purpose of receiving feedbacks and doing arbitrations to move forward the specifications.
 
-The botcommons specifications is composed of this background document, a set of use-cases and core specifications.
+The botcommons specifications is composed of this background document, [use-cases](UseCases.md) and [core specifications](BotCommons.md).
 
 
 ## A bit of history
 
-This initiative started from the [node-sparkbot]() framework where an enriched healthcheck was exposed to serve several debugging and diagnose purposes: know the bot is running ok, reachable from the internet, check the identity the bot is running against, and the notifications he can listen to. 
+This initiative started from the [node-sparkbot](https://github.com/CiscoDevNet/node-sparkbot#healthcheck) framework where an enriched healthcheck was exposed for debugging and diagnose purposes: check the bot is running ok, reachable from the internet, display the identity the code is running against, and the set of notifications implemented by the bot.
 
-Over time, extra metadata were added in the larger perspective to serve the bot industry by sharing common practices, and eventually come up with some universal tooling that could be run among bot platforms.
+Over time, extra metadata were added in the larger perspective to serve the bot industry by sharing common practices, and eventually come up with some universal tooling that could be run among bot platforms. A new implementation got proposed for [botkit](https://github.com/CiscoDevNet/botkit-ciscospark-samples/blob/master/template/bot.js#L47). This implementation then evolved to separate concerns: 
+- from [publishing some metadata](https://github.com/CiscoDevNet/botkit-template/blob/plugin/plugins/botcommons.js), 
+- to exposing an [healthcheck endpoint](https://github.com/CiscoDevNet/botkit-template/blob/plugin/plugins/healthcheck.js),
+- and proposing a [built-in bot command](https://github.com/CiscoDevNet/botkit-template/blob/plugin/skills/about.js).
 
-We shared these thoughts at several developer conferences (CodeMotion Milan, Rome, Amsterdam and DevNetCreate), and finally saw enough interest from various bot community members to start writing down a first draft.
+We shared these thoughts at several developer conferences (CodeMotion Milan, Rome, Amsterdam and DevNetCreate, Devoxx), and saw enough interest from various bot community members to start writing down a first draft.
 
-The Swagger and APICommons specifications are seen as inspiring specifications from the documentation purpose they serve, but also their start small / thinkg big approach to iterate over specifictions.
+The Swagger and APICommons specifications are seen as inspiring specifications from the documentation purpose they serve, but also their pragramtic 'Start Small / Think Big' - Bottom Up approach.
 
 
 ## Terminoloy

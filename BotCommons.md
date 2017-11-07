@@ -16,7 +16,7 @@ Field Name | Type | Presence | Description
 [description](#botcommonsDescription) | `mardown` | **required** | Gives information about the bot's goal, generally used as a short introduction, of one to three sentences
 [url](#botcommonsURL) | `hyperlink` | **required** |  Hyperlink to get more info about the bot. Will generally point to a Web page
 [version](#botcommonsVersion) | `string` | | Version of the bot, following the semantic version format
-[legal-owner](#botcommonsLegalOwner) | `string` | **required** |  Some information of the legal entity or individual behind the bot. The owner is responsible for user's data privacy
+[owner](#botcommonsLegalOwner) | `string` | **required** |  Some information of the legal entity or individual behind the bot. The owner is responsible for user's data privacy
 [contact](#botcommonsSupportContact) | `hyperlink` | **required** |  The individual or group to reach to for feedback or support
 [platform](#botcommonsPlatform) | `enum` | **required** |  The platform where the bot is living
 [identity](#botcommonsBotIdentity) | `string` | **required** |  The identity of the bot on the platform it is living
@@ -59,7 +59,7 @@ Presence: optional
 Examples: 
 - "0.7.0"
 
-### <a name="botcommonsLegalOwner"></a> legal-owner
+### <a name="botcommonsLegalOwner"></a> owner
 
 Some information of the legal entity or individual behind the bot. 
 The owner is responsible for how data are used.
@@ -164,14 +164,14 @@ Example:
     ```json
     {
     "description": "It's an **awesome** bot for sure!",
-    "url": "https://github.com/CiscoDevNet/botkit-template",
+    "url": "https://github.com/BotCommons/ciscospark-botkit-example",
     "version": "0.7.0",
-    "legal-owner": "Cisco DevNet <https://developer.cisco.com>",
+    "owner": "Cisco DevNet <https://developer.cisco.com>",
     "contact": "Stève Sfartz <mailto:stsfartz@cisco.com>",
     "plaform": "ciscospark",
-    "identity": "learninglab@sparkbot.io",
-    "healthcheck": "https://botkit-template.herokuapp.com/",
-    "botcommons": "https://github.com/ObjectIsAdvantag/botcommons/releases/0.1.0"
+    "identity": "BotCommonsDemo@sparkbot.io",
+    "healthcheck": "https://botcommons-ciscospark-sample.herokuapp.com/",
+    "botcommons": "https://github.com/BotCommons/BotCommons-Specification/releases/0.1.0"
     }
     ```
 

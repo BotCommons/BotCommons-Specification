@@ -1,8 +1,10 @@
 # BotCommons: metadata for bots
 
+## Introduction
+
 Lack of common industry practices makes it difficult to inform end-users efficiently (regarding bot usage terms, feedback submission or point of contact for support) as well as implement tooling for bots (such as discovery, versions transitioning, bot status checks).
 
-Our goal here is to fill these [gaps in Bots User's Experience](UseCases.md) through industry [common practices and standardized metadata](BotCommons.md) to facilitate the creation of cross-platforms automated tooling for bots.
+BotCommons is a project to fill these [gaps in Bots User's Experience](UseCases.md) via [bot design practices and standardized metadata](BotCommons.md) to facilitate the creation of cross-platforms automated tooling for bots.
 
 
 ## Principles

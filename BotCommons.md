@@ -1,21 +1,27 @@
 # Core Specifications
 
-The core specifications define the set of metadata and how they can be accessed.
+The core specifications define the set of BotCommons metadata and how they can be accessed.
+
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in BCP 14 RFC2119 RFC8174 when, and only when, they appear in all capitals, as shown here.
+
+This document is licensed under the 'Creative Commons Attribution-ShareAlike 4.0 International'.
 
 
 ## Schema
 
+BotCommons is a JSON object conforming to the schema below:
+
 Field Name | Type | Presence | Description
 ---|:---:|---:|---
-[description](#botcommonsDescription) | `mardown` | _required_ | Gives information about the bot's goal, generally used as a short introduction, of one to three sentences
-[url](#botcommonsURL) | `hyperlink` | _required_ |  Hyperlink to get more info about the bot. Will generally point to a Web page
-[version](#botcommonsVersion) | `string` | _optional_ | Version of the bot, following the semantic version format
-[legal-owner](#botcommonsLegalOwner) | `string` | _required_ |  Some information of the legal entity or individual behind the bot. The owner is responsible for user's data privacy
-[contact](#botcommonsSupportContact) | `hyperlink` | _required_ |  The individual or group to reach to for feedback or support
-[platform](#botcommonsPlatform) | `enum` | _required_ |  The platform where the bot is living
-[identity](#botcommonsBotIdentity) | `string` | _required_ |  The identity of the bot on the platform it is living
-[healthcheck](#botcommonsHealthcheck) | `hyperlink` | _optional_ | Endpoint where it can be technically checked that the API behind the bot is up
-[botcommons](#botcommonsVersion) | `hyperlink` | _required_ |  version of the BotCommons specifications the present metadata conform to
+[description](#botcommonsDescription) | `mardown` | **required** | Gives information about the bot's goal, generally used as a short introduction, of one to three sentences
+[url](#botcommonsURL) | `hyperlink` | **required** |  Hyperlink to get more info about the bot. Will generally point to a Web page
+[version](#botcommonsVersion) | `string` | | Version of the bot, following the semantic version format
+[legal-owner](#botcommonsLegalOwner) | `string` | **required** |  Some information of the legal entity or individual behind the bot. The owner is responsible for user's data privacy
+[contact](#botcommonsSupportContact) | `hyperlink` | **required** |  The individual or group to reach to for feedback or support
+[platform](#botcommonsPlatform) | `enum` | **required** |  The platform where the bot is living
+[identity](#botcommonsBotIdentity) | `string` | **required** |  The identity of the bot on the platform it is living
+[healthcheck](#botcommonsHealthcheck) | `hyperlink` | | Endpoint where it can be technically checked that the API behind the bot is up
+[botcommons](#botcommonsVersion) | `hyperlink` | **required** |  Version of the BotCommons specifications the present metadata object conform to
 
 
 ### <a name="botcommonsDescription"></a> description
@@ -24,7 +30,7 @@ Give information about the bot's goal, generally used as a short introduction, o
 
 Formatted as: `mardown`
 
-Presence: _required_
+Presence: **required**
 
 Examples:
 - "YourBot is an **awesome** bot for sure!"
@@ -36,7 +42,7 @@ Will generally point to a Web page.
 
 Formatted as: `hyperlink`
 
-Presence: _required_
+Presence: **required**
 
 Examples: 
 - "https://github.com/CiscoDevNet/botkit-template"
@@ -48,7 +54,7 @@ Version of the bot, following the semantic version format.
 
 Formatted as: `string`
 
-Presence: _optional_
+Presence: optional
 
 Examples: 
 - "0.7.0"
@@ -60,7 +66,7 @@ The owner is responsible for how data are used.
 
 Formatted as: `string`
 
-Presence: _required_
+Presence: **required**
 
 Examples: 
 - "Cisco DevNet <https://developer.cisco.com>"
@@ -72,7 +78,7 @@ The individual or group to reach to for support.
 
 Formatted as: `hyperlink` (mailto:// or http://)
 
-Presence: _required_
+Presence: **required**
 
 Examples:
 - "Stève Sfartz <mailto:stsfartz@cisco.com>"
@@ -84,7 +90,7 @@ The platform where the bot is living.
 
 Formatted as: `enum` 
 
-Presence: _required_
+Presence: **required**
 
 Possible values: `ciscospark`, `messenger`, `msteams`, `phone`,  `slack`, `telegram`, `twitter`
 (we'll strive to make this list exhaustive, please submit missing entries)
@@ -97,7 +103,7 @@ Unique for the platform.
 
 Formatted as: `string` (platform dependent)
 
-Presence: _required_
+Presence: **required**
 
 Examples:
 - "learninglab@sparkbot.io"
@@ -109,7 +115,7 @@ Endpoint where it can be technically checked that the bot is running
 
 Formatted as: `hyperlink`
 
-Presence: _required_
+Presence: optional
 
 Examples:
 - "https://botkit-template.herokuapp.com/"
@@ -121,7 +127,7 @@ Version of the specifications
 
 Formatted as: `hyperlink`
 
-Presence: _required_
+Presence: **required**
 
 Examples:
 - "https://github.com/ObjectIsAdvantag/botcommons/releases/0.1.0"
@@ -173,7 +179,7 @@ Example:
 
 The bot MAY propose a technical command which will return the metadata object in a JSON format.
 The purpose of this command is to be exploited by bot-specific toolings.
-This command MUST be named `.commons` - DOT COMMONS -.
+This command MUST be named `.commons` (prononed DOT COMMONS).
 
 The bot MAY propose a functional command for the user to inquire about the bot metadata.
 The preferred name for this command is `about`.

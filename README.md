@@ -1,5 +1,8 @@
 # BotCommons: Metadata for Bots
 
+![](/logo/botcommons-tiny.png)
+
+
 ## Introduction
 
 Lack of common industry practices makes it difficult to inform end-users efficiently (regarding bot usage terms, feedback submission or point of contact for support) as well as implement tooling for bots (such as discovery, versions transitioning, bot status checks).

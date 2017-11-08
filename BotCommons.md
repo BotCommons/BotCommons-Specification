@@ -4,7 +4,7 @@ The core specifications define the set of BotCommons metadata and how they can b
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in BCP 14 RFC2119 RFC8174 when, and only when, they appear in all capitals, as shown here.
 
-This document is licensed under the 'Creative Commons Attribution-ShareAlike 4.0 International'.
+This document is licensed under the 'Apache License Version 2.0'.
 
 
 ## Schema
